@@ -83,7 +83,7 @@
             </a>
         </div>
 
-        <h2>Liste des Articles</h2>
+        
         <table>
             <thead>
                 <tr>
