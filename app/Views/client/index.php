@@ -97,6 +97,7 @@
         <!-- Add more carousel items here if needed -->
       </div>
     </div>
+
   </section>
   <!-- End Slider Section -->
 

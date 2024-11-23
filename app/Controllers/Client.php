@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\ArticleModel ;
 
 class Client extends BaseController
 {
@@ -18,7 +19,9 @@ class Client extends BaseController
     }
     public function menu()
     {
-        return view('client/menu');
+        $article = new ArticleModel();
+        $data['article'] = $article->findAll();
+        return view('client/menu',$data);
     }
     public function panier()
     {

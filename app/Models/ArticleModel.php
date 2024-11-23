@@ -11,6 +11,7 @@ class ArticleModel extends Model
         'nom',
         'description',
         'prix',
+        'image',
     ];
 }
 

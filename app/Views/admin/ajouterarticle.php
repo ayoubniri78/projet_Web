@@ -19,10 +19,20 @@
         }
 
         input[type="text"],
-        input[type="number"] {
+        input[type="number"],
+        input[type="file"] {
             padding: 8px;
             width: 100%;
             margin-bottom: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+
+        input[type="file"] {
+            padding: 5px;
+            cursor: pointer;
             font-size: 14px;
         }
 
@@ -34,12 +44,14 @@
             color: white;
             cursor: pointer;
             font-size: 16px;
+            border-radius: 4px;
         }
 
         button:hover {
             background-color: #218838;
         }
     </style>
+
 </head>
 
 <body>
@@ -50,6 +62,7 @@
             <input type="text" name="articleName" placeholder="Nom de l'article" required>
             <input type="text" name="articleDescription" placeholder="Description" required>
             <input type="number" name="articlePrice" placeholder="Prix de l'article" required>
+            <input type="file" name="articleImage" required>
             <button type="submit">Ajouter l'Article</button>
         </form>
         <a href="listeArticle"><button>Retour à la Liste des Articles</button></a>

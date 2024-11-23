@@ -113,38 +113,30 @@
     <!-- Menu Section -->
     <div class="menu-container">
       <div class="row" id="products-container">
-        <!-- Produit 1 -->
-        <div class="col-sm-6 col-md-4 mb-4">
-          <div class="card h-100 text-center">
-            <img src="<?= base_url('img/chocolate1.png') ?>" class="card-img-top" alt="Chocolate 1">
-            <div class="card-body">
-              <h5 class="card-title">Chocolate Délicieux</h5>
-              <p class="card-text">$10.0</p>
-              <button class="btn btn-primary" onclick="addToCart('Chocolate Délicieux', 10)">Ajouter au panier</button>
-            </div>
-          </div>
-        </div>
+
         <!-- Produit 2 -->
-        <div class="col-sm-6 col-md-4 mb-4">
-          <div class="card h-100 text-center">
-            <img src="<?= base_url('img/chocolate2.png') ?>" class="card-img-top" alt="Chocolate 2">
-            <div class="card-body">
-              <h5 class="card-title">Chocolate Classique</h5>
-              <p class="card-text">$7.0</p>
-              <button class="btn btn-primary" onclick="addToCart('Chocolate Classique', 7)">Ajouter au panier</button>
+        <div class="row">
+          <?php foreach ($article as $item): ?>
+            <!-- Produit -->
+            <div class="col-sm-6 col-md-4 mb-4">
+              <div class="card h-100 text-center">
+                <!-- Affichage du nom de l'article -->
+                <div class="card-body">
+                  <h5 class="card-title"><?= esc($item['nom']) ?></h5>
+
+                  <!-- Affichage de la description de l'article -->
+                  <p class="card-text"><?= esc($item['description']) ?></p>
+
+                  <!-- Affichage du prix -->
+                  <p class="card-text"><?= $item['prix'] ?>€</p>
+
+                  <!-- Ajouter au panier -->
+                  <button class="btn btn-primary"
+                    onclick="addToCart('<?= esc($item['nom']) ?>', <?= $item['prix'] ?>)">Ajouter au panier</button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <!-- Produit 3 -->
-        <div class="col-sm-6 col-md-4 mb-4">
-          <div class="card h-100 text-center">
-            <img src="" class="card-img-top" alt="Chocolate 3">
-            <div class="card-body">
-              <h5 class="card-title">Chocolate Intense</h5>
-              <p class="card-text">$8.0</p>
-              <button class="btn btn-primary" onclick="addToCart('Chocolate Intense', 8)">Ajouter au panier</button>
-            </div>
-          </div>
+          <?php endforeach; ?>
         </div>
       </div>
     </div>
