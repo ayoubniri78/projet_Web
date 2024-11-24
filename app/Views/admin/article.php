@@ -74,6 +74,11 @@
 </head>
 
 <body>
+    <?php
+    if (session()->getFlashdata('status')) {
+        echo session()->getFlashdata('status');
+    }
+    ?>
 
     <div class="container">
         <h2>Ajouter un Article</h2>
@@ -83,7 +88,7 @@
             </a>
         </div>
 
-        
+
         <table>
             <thead>
                 <tr>

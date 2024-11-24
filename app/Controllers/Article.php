@@ -20,14 +20,37 @@ class Article extends BaseController
     public function enregistre()
     {
         $article = new ArticleModel();
+        $file = $this->request->getFile('articleImage');
+
+        // Vérifier si le fichier est valide
+        if ($file && $file->isValid()) {
+            // Générer un nom aléatoire pour l'image
+            $imageName = $file->getRandomName();
+
+            // Déplacer le fichier vers le dossier 'uploads/'
+            $file->move('uploads', $imageName);
+        } else {
+            // Gérer l'erreur si le fichier est invalide
+            return redirect()->back()->with('error', 'Erreur lors de l\'upload de l\'image. Veuillez réessayer.');
+        }
+
+        // Créer les données pour l'article
         $data = [
             'nom' => $this->request->getPost('articleName'),
             'description' => $this->request->getPost('articleDescription'),
             'prix' => $this->request->getPost('articlePrice'),
+            'image' => isset($imageName) ? $imageName : null, // Assurez-vous que l'image est définie
         ];
-        $article->save($data);
-        return redirect()->to('/admin/listeArticle')->with('status', 'Article ajouter avec succes');
+
+        // Enregistrer les données dans la base
+        if ($article->save($data)) {
+            return redirect()->to('/admin/listeArticle')->with('status', 'Article ajouté avec succès');
+        } else {
+            // Gestion des erreurs d'enregistrement
+            return redirect()->back()->with('error', 'Erreur lors de l\'ajout de l\'article. Veuillez réessayer.');
+        }
     }
+
     public function editer($id)
     {
         $article = new ArticleModel();
