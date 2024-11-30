@@ -61,6 +61,12 @@
             <li class="nav-item">
               <a class="nav-link text-white" href="<?= base_url('/client/contact') ?>">Contact Us</a>
             </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link text-white" href="<?= base_url('/client/contact') ?>">Contact Us</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link text-white" href="../../logout">logout</a>
+            </li>
           </ul>
           <a href="<?= base_url('/client/panier') ?>" class="text-white">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i>

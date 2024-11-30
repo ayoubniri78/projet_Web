@@ -58,11 +58,13 @@
 
     <div class="container">
         <h2>Ajouter un Article</h2>
-        <form action="/admin/enregistrerarticle" method="POST">
+        <form action="/admin/enregistrerarticle" method="POST" enctype="multipart/form-data">
             <input type="text" name="articleName" placeholder="Nom de l'article" required>
             <input type="text" name="articleDescription" placeholder="Description" required>
             <input type="number" name="articlePrice" placeholder="Prix de l'article" required>
-            <input type="file" name="articleImage" required>
+            <input type="number" name="articleStock" placeholder="Stock de l'article" required>
+            <label for="articleImage">Image de l'article :</label>
+            <input type="file" name="articleImage" id="articleImage" required><br>
             <button type="submit">Ajouter l'Article</button>
         </form>
         <a href="listeArticle"><button>Retour à la Liste des Articles</button></a>

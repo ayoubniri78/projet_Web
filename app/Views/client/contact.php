@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="<?= base_url('css/font-awesome.min.css') ?>">
   <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
 </head>
+<?=base_url('/')?>
 
 <body>
 

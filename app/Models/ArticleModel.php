@@ -5,13 +5,15 @@ use CodeIgniter\Model;
 
 class ArticleModel extends Model
 {
-    protected $table='article';
-    protected $primaryKey = 'id' ;
+    protected $table = 'article';
+    protected $primaryKey = 'id';
     protected $allowedFields = [
         'nom',
         'description',
         'prix',
         'image',
+        'stock',
     ];
+
 }
 

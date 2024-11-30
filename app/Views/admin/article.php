@@ -41,6 +41,17 @@
             background-color: #fff;
         }
 
+        td img {
+            width: 50px;
+            /* Limite la largeur de l'image */
+            height: 50px;
+            /* Limite la hauteur de l'image */
+            object-fit: cover;
+            /* Assure que l'image est bien cadrée */
+            border-radius: 5px;
+            /* Ajoute un léger arrondi aux coins de l'image */
+        }
+
         button {
             padding: 6px 12px;
             border: none;
@@ -70,24 +81,27 @@
         .form-container button {
             background-color: #28a745;
         }
+
+        .form-container a {
+            text-decoration: none;
+        }
     </style>
 </head>
 
 <body>
-    <?php
-    if (session()->getFlashdata('status')) {
-        echo session()->getFlashdata('status');
-    }
-    ?>
 
     <div class="container">
-        <h2>Ajouter un Article</h2>
+        <h2>Liste des Articles</h2>
+        <?php
+        if (session()->getFlashdata('status')) {
+            echo session()->getFlashdata('status');
+        }
+        ?>
         <div class="form-container">
             <a href="ajouterarticle">
                 <button type="submit">Ajouter des articles</button>
             </a>
         </div>
-
 
         <table>
             <thead>
@@ -96,6 +110,8 @@
                     <th>Nom</th>
                     <th>Description</th>
                     <th>Prix</th>
+                    <th>Stock</th>
+                    <th>Image</th> <!-- Nouvelle colonne pour l'image -->
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -108,7 +124,16 @@
                         <td><?= $row['id'] ?></td>
                         <td><?= $row['nom'] ?></td>
                         <td><?= $row['description'] ?></td>
-                        <td><?= $row['prix'] ?>euro</td>
+                        <td><?= $row['prix'] ?>€</td>
+                        <td><?= $row['stock'] ?></td>
+                        <td>
+                            <?php if (!empty($row['image'])): ?>
+                                <!-- Afficher l'image si elle existe -->
+                                <img src="<?= base_url('uploads/' . $row['image']) ?>" alt="Image de l'article" width="100">
+                            <?php else: ?>
+                                Pas d'image
+                            <?php endif; ?>
+                        </td>
                         <td>
                             <a href="<?= base_url('admin/editer/' . $row['id']) ?>">
                                 <button>Modifier</button>

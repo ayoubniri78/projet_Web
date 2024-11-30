@@ -84,17 +84,20 @@
 
     <div class="container">
         <h2>Modifier un Article</h2>
-        <form action="<?= base_url('admin/update/' . $atricle['id']) ?>" method="POST">
+        <form action="<?= base_url('admin/update/' . $article['id']) ?>" method="POST" enctype="multipart/form-data">
             <label for="articleName">Nom de l'article :</label>
-            <input type="text" id="articleName" name="articleName" value="<?= $atricle['nom'] ?>" required>
+            <input type="text" id="articleName" name="articleName" value="<?= $article['nom'] ?>" required>
 
             <label for="articleDescription">Description :</label>
-            <input type="text" id="articleDescription" name="articleDescription" value="<?= $atricle['description'] ?>"
+            <input type="text" id="articleDescription" name="articleDescription" value="<?= $article['description'] ?>"
                 required>
 
             <label for="articlePrice">Prix :</label>
-            <input type="number" id="articlePrice" name="articlePrice" value="<?= $atricle['prix'] ?>" required>
-            <a href="<?= base_url('admin/update/' . $atricle['id']) ?>">
+            <input type="number" id="articlePrice" name="articlePrice" value="<?= $article['prix'] ?>" required>
+            <label for="articleStock">Stock :</label>
+            <input type="number" id="articleStock" name="articleStock" value="<?= $article['stock'] ?>" required>
+            <input type="file" name="articleImage" id="articleImage" value="<?= $article['image'] ?>"><br>
+            <a href="<?= base_url('admin/update/' . $article['id']) ?>">
                 <button type="submit">Enregistrer les Modifications</button>
             </a>
         </form>
