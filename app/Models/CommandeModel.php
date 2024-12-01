@@ -4,7 +4,6 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-
 class CommandeModel extends Model
 {
     protected $table = 'commandes';
@@ -16,8 +15,8 @@ class CommandeModel extends Model
         'ville',
         'code_postal',
         'montant_total',
+        'status', // Ajout du champ 'status' si nécessaire
     ];
 
-    // Désactiver les timestamps, car la table ne contient pas de colonnes `created_at` et `updated_at`
     protected $useTimestamps = false;
 }
