@@ -64,9 +64,11 @@
             <input type="number" name="articlePrice" placeholder="Prix de l'article" required>
             <input type="number" name="articleStock" placeholder="Stock de l'article" required>
             <label for="articleImage">Image de l'article :</label>
-            <input type="file" name="articleImage" id="articleImage" required><br>
+            <input type="file" name="articleImage" id="articleImage" required>
+            <br>
             <button type="submit">Ajouter l'Article</button>
         </form>
+        <br>
         <a href="listeArticle"><button>Retour à la Liste des Articles</button></a>
     </div>
 

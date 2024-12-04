@@ -51,12 +51,111 @@ class Article extends BaseController
 
             // Enregistrer l'article avec l'image dans la base de données
             $article->save($data);
+
+            // Envoyer un email aux utilisateurs
+            $this->envoyerEmails($data);
+
             return redirect()->to('/admin/listeArticle')->with('status', 'Article ajouté avec succès');
         } catch (\RuntimeException $e) {
             // En cas d'erreur, afficher un message
             return redirect()->back()->with('error', $e->getMessage());
         }
     }
+
+    /**
+     * Méthode pour envoyer un email à tous les utilisateurs
+     */
+    /**
+     * Méthode pour envoyer un email à tous les utilisateurs
+     */
+    private function envoyerEmails($article)
+    {
+        // Charger le modèle UserModel ou faire une requête directe
+        $db = \Config\Database::connect();
+        $builder = $db->table('auth_identities');
+        $users = $builder->select('secret')->where('type', 'email_password')->get()->getResult();
+
+        $email = \Config\Services::email();
+
+        foreach ($users as $user) {
+            $email->clear();
+            $email->setTo($user->secret);
+            $email->setSubject('Découvrez notre nouveau produit : ' . $article['nom']);
+
+            // Contenu HTML professionnel
+            $message = "
+        <html>
+        <head>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    line-height: 1.6;
+                    color: #333;
+                }
+                .header {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 10px;
+                    text-align: center;
+                }
+                .content {
+                    padding: 20px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    background-color: #f9f9f9;
+                }
+                .footer {
+                    text-align: center;
+                    font-size: 12px;
+                    color: #777;
+                    margin-top: 20px;
+                }
+                .btn {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background-color: #4CAF50;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    margin-top: 20px;
+                }
+                .btn:hover {
+                    background-color: #45a049;
+                }
+            </style>
+        </head>
+        <body>
+            <div class='header'>
+                <h1>Nouveau Produit Disponible !</h1>
+            </div>
+            <div class='content'>
+                <p>Bonjour,</p>
+                <p>Nous sommes ravis de vous annoncer l'arrivée d'un nouveau produit dans notre boutique :</p>
+                <ul>
+                    <li><strong>Nom :</strong> {$article['nom']}</li>
+                    <li><strong>Description :</strong> {$article['description']}</li>
+                    <li><strong>Prix :</strong> {$article['prix']} €</li>
+                </ul>
+                <p>Ne manquez pas l'occasion de découvrir ce produit exceptionnel !</p>
+                <a class='btn' href='resto.loc/client/menu'>Voir le produit</a>
+            </div>
+            <div class='footer'>
+                <p>Merci pour votre confiance.</p>
+                <p>L'équipe de Votre Boutique</p>
+                <p><small>Ce message a été envoyé automatiquement. Veuillez ne pas répondre à cet email.</small></p>
+            </div>
+        </body>
+        </html>";
+
+            // Ajouter le contenu HTML dans l'email
+            $email->setMessage($message);
+            $email->setMailType('html'); // Spécifie que l'email est en HTML
+
+            $email->send();
+        }
+    }
+
+
     public function editer($id)
     {
         // Créer une instance du modèle ArticleModel

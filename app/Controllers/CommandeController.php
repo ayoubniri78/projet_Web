@@ -16,6 +16,10 @@ class CommandeController extends Controller
 
         // Récupérer l'ID de l'utilisateur et les données du formulaire
         $userId = session()->get('user_id');
+        if (empty($userId)) {
+            return redirect()->back()->with('error', 'Vous devez être connecté pour passer une commande.');
+        }
+
         $montantTotal = $this->request->getPost('montant_total');
         $adresse = $this->request->getPost('adresse');
         $ville = $this->request->getPost('ville');
@@ -24,7 +28,7 @@ class CommandeController extends Controller
         $cartQuantities = $this->request->getPost('cart_quantities');
         $cartPrices = $this->request->getPost('cart_prices');
 
-        if (empty($montantTotal) || empty($adresse) || empty($ville) || empty($codePostal)) {
+        if (empty($userId) || empty($montantTotal) || empty($adresse) || empty($ville) || empty($codePostal)) {
             return redirect()->back()->withInput()->with('error', 'Tous les champs sont obligatoires.');
         }
 
@@ -62,7 +66,7 @@ class CommandeController extends Controller
     }
     public function success()
     {
-        return view('/client/success') ; 
+        return view('/client/success');
     }
 
 }

@@ -13,6 +13,32 @@
   <link href="<?= base_url('css/responsive.css') ?>" rel="stylesheet" />
   <style>
     /* Global Styles */
+    /* Changer la couleur de fond de la navbar */
+    .navbar {
+      background-color: #ffffff;
+      /* Fond blanc */
+      border-bottom: 1px solid #ddd;
+      /* Légère bordure grise pour séparer la navbar */
+    }
+
+    /* Couleur des liens de la navbar */
+    .navbar-nav .nav-item .nav-link {
+      color: #333;
+      /* Couleur du texte (gris foncé) */
+    }
+
+    /* Changer la couleur des liens au survol */
+    .navbar-nav .nav-item .nav-link:hover {
+      color: #ff5722;
+      /* Couleur d'accent au survol, ici orange */
+    }
+
+    /* Changer la couleur du texte actif (lien de la page courante) */
+    .navbar-nav .nav-item.active .nav-link {
+      color: #ff5722;
+      /* Couleur de l'élément actif */
+    }
+
     body {
       font-family: 'Arial', sans-serif;
       background-color: #f8f9fa;
@@ -54,7 +80,7 @@
     }
 
     header nav a:hover {
-      color: #f4a261;
+      color: white;
       /* Changement de couleur sur hover */
       transform: translateY(-3px);
       /* Décalage vers le haut */
@@ -331,14 +357,7 @@
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class=""> </span>
         </button>
-        <form class="d-flex search-bar">
-          <!-- Champ de recherche -->
-          <input type="text" id="search-input" class="form-control" placeholder="Rechercher un produit..."
-            onkeyup="searchProduct()">
-          <div id="search-results"></div> <!-- Zone pour afficher les résultats de la recherche -->
 
-          <button class="btn btn-outline-light" type="button" onclick="searchProduct()">Rechercher</button>
-        </form>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
@@ -460,10 +479,10 @@
               <div class="col-md-2">
                 <h5 class="text-uppercase">Liens rapides</h5>
                 <ul class="list-unstyled">
-                  <li><a href="index.html" class="text-white">Home</a></li>
-                  <li><a href="menu.html" class="text-white">Menu</a></li>
-                  <li><a href="about.html" class="text-white">About</a></li>
-                  <li><a href="contact.html" class="text-white">Contact</a></li>
+                  <li><a href="/client/index" class="text-white">Home</a></li>
+                  <li><a href="/client/menu" class="text-white">Menu</a></li>
+                  <li><a href="/client/about" class="text-white">About</a></li>
+                  <li><a href="/client/contact" class="text-white">Contact</a></li>
                 </ul>
               </div>
 

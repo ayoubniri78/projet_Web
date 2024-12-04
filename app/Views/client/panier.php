@@ -87,6 +87,8 @@
       <input type="hidden" id="totalAmount" name="montant_total" />
 
       <!-- Détails de la commande -->
+
+      <!-- Détails de la commande -->
       <div class="form-group">
         <label for="cardNumber">Numéro de carte</label>
         <input type="text" class="form-control" id="cardNumber" name="cardNumber" required placeholder="Numéro de carte"
@@ -106,19 +108,21 @@
       <!-- Détails d'adresse -->
       <div class="form-group">
         <label for="adresse">Adresse de livraison</label>
-        <input type="text" class="form-control" id="adresse" name="adresse" required placeholder="Votre adresse">
+        <input type="text" class="form-control" id="adresse" name="adresse"
+          value="<?= isset($adresse) ? esc($adresse['adresse']) : '' ?>" >
       </div>
 
       <div class="form-group">
         <label for="ville">Ville</label>
-        <input type="text" class="form-control" id="ville" name="ville" required placeholder="Ville">
+        <input type="text" class="form-control" id="ville" name="ville"
+          value="<?= isset($adresse) ? esc($adresse['ville']) : '' ?>" >
       </div>
 
       <div class="form-group">
         <label for="code_postal">Code postal</label>
-        <input type="text" class="form-control" id="code_postal" name="code_postal" required placeholder="Code postal">
+        <input type="text" class="form-control" id="code_postal" name="code_postal"
+          value="<?= isset($adresse) ? esc($adresse['code_postal']) : '' ?>" >
       </div>
-
       <!-- Affichage du montant total -->
       <div class="form-group">
         <label>Total de la commande</label>

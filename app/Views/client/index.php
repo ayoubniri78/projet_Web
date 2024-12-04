@@ -65,7 +65,7 @@
               <a class="nav-link text-white" href="<?= base_url('/client/contact') ?>">Contact Us</a>
             </li> -->
             <li class="nav-item">
-              <a class="nav-link text-white" href="../../logout">logout</a>
+              <a class="nav-link text-white" href="/client/editAddress">Votre address</a>
             </li>
           </ul>
           <a href="<?= base_url('/client/panier') ?>" class="text-white">
@@ -94,7 +94,7 @@
               </div>
               <div class="col-md-4 ml-auto">
                 <div class="img-box">
-                  <img src="<?= base_url('img/slider-img.png') ?>" alt="slider">
+                  <img src="<?= base_url('img/slider-img.jpeg') ?>" alt="slider" width="25px" height="">
                 </div>
               </div>
             </div>
@@ -114,11 +114,12 @@
         <div class="col-md-6">
           <div class="detail-box">
             <div class="heading_container">
-              <h2>About Our Company</h2>
+              <h2>Sur nous </h2>
             </div>
             <p>
-              Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content
-              here, content here', making it look like readable English.
+              Profitez également de nos options de commande personnalisée pour vos événements ou soirées spéciales.
+              Vivez le Maroc à travers ses saveurs et laissez-vous transporter par une cuisine riche en histoire et en
+              amour. Avec nous, la magie du Maroc est toujours à portée de main.
             </p>
           </div>
         </div>
@@ -139,7 +140,7 @@
         <!-- About -->
         <div class="col-md-4">
           <h5 class="text-uppercase">About</h5>
-          <p>Welcome to our restaurant! Order online and enjoy delicious meals carefully prepared.</p>
+          <p>Vivez l'exeperience des nouriture marociane.</p>
         </div>
         <!-- Quick Links -->
         <div class="col-md-2">
@@ -162,10 +163,10 @@
         </div>
         <!-- Hours -->
         <div class="col-md-3">
-          <h5 class="text-uppercase">Opening Hours</h5>
+          <h5 class="text-uppercase">Heures d'ouverture</h5>
           <ul class="list-unstyled">
-            <li>Mon-Fri: 10am - 10pm</li>
-            <li>Sat-Sun: 11am - 11pm</li>
+            <li>Lundi - Vendredi : 10h - 22h</li>
+            <li>Samedi - Dimanche : 11h - 23h</li>
           </ul>
         </div>
       </div>

@@ -79,11 +79,16 @@
               <h2>About Our Company</h2>
             </div>
             <p>
-              Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content
-              here, content here', making it look like readable English. Many desktop publishing packages and web page
-              editors now use Lorem Ipsum as their default model text.
+              Plongez au cœur de la culture culinaire marocaine avec notre site, votre destination en ligne pour
+              savourer les délices authentiques du Maroc en France. Que vous soyez à la recherche de plats traditionnels
+              faits maison, comme le couscous, le tajine ou les pâtisseries marocaines, ou d'ingrédients rares pour
+              recréer ces recettes chez vous, nous avons tout ce qu'il vous faut.
+
+              Nous sélectionnons soigneusement des produits de qualité, préparés avec des saveurs authentiques et des
+              épices typiques du Maroc, pour vous offrir une expérience gastronomique inoubliable. Découvrez une large
+              gamme de mets marocains prêts à être livrés directement à votre porte, où que vous soyez en France.
             </p>
-            <a href="#"><img src="<?= base_url('img/color-arrow.png') ?>" alt="Arrow"></a>
+            
           </div>
         </div>
         <div class="col-md-6">

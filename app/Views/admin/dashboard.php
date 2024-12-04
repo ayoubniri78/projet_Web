@@ -69,7 +69,7 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a href="<?= base_url('/admin/listeCommande') ?>" class="card text-center p-4">
+                <a href="<?= base_url('admin/commandes') ?>" class="card text-center p-4">
                     <h5 class="card-title">Total Commandes</h5>
                     <p class="display-6"><?= $totalCommandes ?></p>
                 </a>
