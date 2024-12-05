@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChocoLux</title>
+  <title>RestoMA</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="<?= base_url('css/bootstrap.css') ?>" />
@@ -12,114 +12,6 @@
   <link href="<?= base_url('css/style.css') ?>" rel="stylesheet" />
   <link href="<?= base_url('css/responsive.css') ?>" rel="stylesheet" />
   <style>
-    /* Global Styles */
-    /* Changer la couleur de fond de la navbar */
-    .navbar {
-      background-color: #ffffff;
-      /* Fond blanc */
-      border-bottom: 1px solid #ddd;
-      /* Légère bordure grise pour séparer la navbar */
-    }
-
-    /* Couleur des liens de la navbar */
-    .navbar-nav .nav-item .nav-link {
-      color: #333;
-      /* Couleur du texte (gris foncé) */
-    }
-
-    /* Changer la couleur des liens au survol */
-    .navbar-nav .nav-item .nav-link:hover {
-      color: #ff5722;
-      /* Couleur d'accent au survol, ici orange */
-    }
-
-    /* Changer la couleur du texte actif (lien de la page courante) */
-    .navbar-nav .nav-item.active .nav-link {
-      color: #ff5722;
-      /* Couleur de l'élément actif */
-    }
-
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Style de base pour le header */
-    header {
-      background-color: #333;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      /* Ombre pour le header */
-    }
-
-    /* Logo */
-    header .logo img {
-      height: 50px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    header .logo img:hover {
-      transform: scale(1.1);
-      /* Agrandissement léger */
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      /* Effet d'ombre */
-    }
-
-    /* Navigation */
-    header nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 1rem;
-      transition: color 0.3s ease, transform 0.3s ease;
-    }
-
-    header nav a:hover {
-      color: white;
-      /* Changement de couleur sur hover */
-      transform: translateY(-3px);
-      /* Décalage vers le haut */
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-      /* Ombre légère du texte */
-    }
-
-    /* Bouton de recherche */
-    header .search-bar input {
-      border: 2px solid #f4a261;
-      border-radius: 20px;
-      padding: 8px 15px;
-      transition: box-shadow 0.3s ease, border-color 0.3s ease;
-    }
-
-    header .search-bar input:focus {
-      outline: none;
-      border-color: #e76f51;
-      box-shadow: 0 0 8px rgba(255, 165, 0, 0.7);
-      /* Effet lumineux */
-    }
-
-    header .search-bar button {
-      background-color: #f4a261;
-      color: white;
-      border: none;
-      padding: 8px 15px;
-      border-radius: 20px;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    header .search-bar button:hover {
-      background-color: #e76f51;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      /* Ombre du bouton */
-      cursor: pointer;
-    }
-
-
     /* Search Bar */
     .search-bar input {
       border-radius: 20px;
@@ -352,19 +244,21 @@
   <header class="header_section">
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg custom_nav-container ">
-        <a class="navbar-brand" href="<?= base_url('/client/index') ?>">ChocoLux</a>
+        <a class="navbar-brand" href="<?= base_url('/client/index') ?>">
+          RestoMA
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class=""> </span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="<?= base_url('/client/index') ?>">Home</a>
+              <a class="nav-link" href="<?= base_url('/client/index') ?>">Home <span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?= base_url('/client/about') ?>">About</a>
+              <a class="nav-link" href="<?= base_url('/client/about') ?>"> About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?= base_url('/client/menu') ?>">Menu</a>
@@ -507,7 +401,7 @@
             </div>
 
             <div class="text-center py-3">
-              <p>&copy; 2024 ChocoLux. Tous droits réservés.</p>
+              <p>&copy; 2024 RestoMA. Tous droits réservés.</p>
             </div>
           </div>
         </footer>

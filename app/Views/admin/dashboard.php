@@ -94,7 +94,7 @@
                             <td><?= $article['id'] ?></td>
                             <td><?= $article['nom'] ?></td>
                             <td><?= $article['description'] ?></td>
-                            <td><?= $article['prix'] ?> DH</td>
+                            <td><?= $article['prix'] ?> euro</td>
                             <td><?= $article['stock'] ?></td>
                             <td>
                                 <a href="<?= base_url('/admin/listeArticle/') ?>" class="btn btn-primary btn-sm">

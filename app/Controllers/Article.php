@@ -141,7 +141,7 @@ class Article extends BaseController
             </div>
             <div class='footer'>
                 <p>Merci pour votre confiance.</p>
-                <p>L'équipe de Votre Boutique</p>
+                <p>L'équipe RestoMA</p>
                 <p><small>Ce message a été envoyé automatiquement. Veuillez ne pas répondre à cet email.</small></p>
             </div>
         </body>

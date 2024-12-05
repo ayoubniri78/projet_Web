@@ -41,7 +41,7 @@
                         <td><?= $commande['adresse'] ?></td>
                         <td><?= $commande['ville'] ?></td>
                         <td><?= $commande['code_postal'] ?></td>
-                        <td><?= $commande['montant_total'] ?> DH</td>
+                        <td><?= $commande['montant_total'] ?>Euro</td>
                         <td><?= $commande['status'] ?? 'En attente' ?></td>
                         <td>
                             <a href="<?= base_url('/admin/commandes/markAsDelivered/' . $commande['id']) ?>"

@@ -31,7 +31,7 @@
   <header class="header_section">
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg custom_nav-container">
-        <a class="navbar-brand" href="<?= base_url('/client/index') ?>">ChocoLux</a>
+        <a class="navbar-brand" href="<?= base_url('/client/index') ?>">RestoMA</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class=""> </span>
@@ -109,19 +109,19 @@
       <div class="form-group">
         <label for="adresse">Adresse de livraison</label>
         <input type="text" class="form-control" id="adresse" name="adresse"
-          value="<?= isset($adresse) ? esc($adresse['adresse']) : '' ?>" >
+          value="<?= isset($adresse) ? esc($adresse['adresse']) : '' ?>">
       </div>
 
       <div class="form-group">
         <label for="ville">Ville</label>
         <input type="text" class="form-control" id="ville" name="ville"
-          value="<?= isset($adresse) ? esc($adresse['ville']) : '' ?>" >
+          value="<?= isset($adresse) ? esc($adresse['ville']) : '' ?>">
       </div>
 
       <div class="form-group">
         <label for="code_postal">Code postal</label>
         <input type="text" class="form-control" id="code_postal" name="code_postal"
-          value="<?= isset($adresse) ? esc($adresse['code_postal']) : '' ?>" >
+          value="<?= isset($adresse) ? esc($adresse['code_postal']) : '' ?>">
       </div>
       <!-- Affichage du montant total -->
       <div class="form-group">

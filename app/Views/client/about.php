@@ -12,7 +12,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>ChocoLux</title>
+  <title>RestoMA</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="<?= base_url('css/bootstrap.css') ?>" />
@@ -31,7 +31,7 @@
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg custom_nav-container ">
         <a class="navbar-brand" href="index.html">
-          ChocoLux
+          RestoMA
         </a>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -76,7 +76,7 @@
         <div class="col-md-6">
           <div class="detail-box">
             <div class="heading_container">
-              <h2>About Our Company</h2>
+              <h2>Sur nous</h2>
             </div>
             <p>
               Plongez au cœur de la culture culinaire marocaine avec notre site, votre destination en ligne pour
@@ -88,7 +88,7 @@
               épices typiques du Maroc, pour vous offrir une expérience gastronomique inoubliable. Découvrez une large
               gamme de mets marocains prêts à être livrés directement à votre porte, où que vous soyez en France.
             </p>
-            
+
           </div>
         </div>
         <div class="col-md-6">

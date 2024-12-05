@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChocoLux</title>
+  <title>RestoMA</title>
   <link rel="stylesheet" href="<?= base_url('css/bootstrap.css') ?>">
   <link rel="stylesheet" href="<?= base_url('css/font-awesome.min.css') ?>">
   <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
@@ -18,7 +18,7 @@
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg custom_nav-container ">
         <a class="navbar-brand" href="<?= base_url('/client/index') ?>">
-          ChocoLux
+          RestoMA
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
